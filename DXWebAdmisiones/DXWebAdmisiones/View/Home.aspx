@@ -5,26 +5,38 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
     <style>
         .wizard-step {
-            margin-bottom: 20px;
+            margin-bottom: 20PX;
         }
 
         .navigation-buttons {
             margin-top: 20px;
         }
+
+        .pageControl {
+            Width: 100%;
+            Height: 300px;
+            background-color:lightcyan;
+        }
+
+        h4 {
+            border-bottom: 1px solid lightgrey;
+            padding-bottom: 1px;
+            width: 100%;
+        }
+
     </style>
     <div class="container">
-        <dx:ASPxPageControl ID="PageControl1" runat="server" ActiveTabIndex="0" ClientInstanceName="pageControl">
+        <dx:ASPxPageControl ID="PageControl1" runat="server" ActiveTabIndex="0" ClientInstanceName="pageControl" CssClass="pageControl">
             <TabPages>
                 <dx:TabPage Text="1. Información de Inscripción" Name="tabStep1">
                     <ContentCollection>
                         <dx:ContentControl>
                             <div class="wizard-step">
-                                <div class="container mt-5">
-                                    <div class="form-group row">
+                                    <div class="row">
                                         <label class="col-md-2 col-form-label">Tipo Aspirante:</label>
-                                        <div class="col-md-10">
-                                            <dx:ASPxRadioButtonList ID="rblTipoAspirante" runat="server"
-                                                RepeatDirection="Horizontal" ValueType="System.String">
+                                        <div class="col-md-7">
+                                            <dx:ASPxRadioButtonList ID="rblTipoAspirante" runat="server" CssClass="form-control"
+                                                RepeatDirection="Horizontal" ValueType="System.String" >
                                                 <Items>
                                                     <dx:ListEditItem Text="Nuevo" Value="Nuevo" />
                                                     <dx:ListEditItem Text="Reingreso" Value="Reingreso" />
@@ -38,11 +50,11 @@
                                                 Display="Dynamic" CssClass="text-danger" />
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-2 col-form-label">Modalidad:</label>
-                                    <div class="col-md-4">
-                                        <dx:ASPxComboBox ID="cmbModalidad" runat="server" ValueType="System.String">
+                               
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-form-label">Modalidad:</label>
+                                        <dx:ASPxComboBox ID="cmbModalidad" runat="server" ValueType="System.String" CssClass="form-control">
                                             <Items>
                                                 <dx:ListEditItem Text="Presencial" Value="Presencial" />
                                                 <dx:ListEditItem Text="Virtual" Value="Virtual" />
@@ -53,9 +65,10 @@
                                             ErrorMessage="Seleccione la modalidad"
                                             Display="Dynamic" CssClass="text-danger" />
                                     </div>
-                                    <label class="col-md-2 col-form-label">Sede:</label>
-                                    <div class="col-md-4">
-                                        <dx:ASPxComboBox ID="cmbSede" runat="server" ValueType="System.Int32"
+                                    
+                                    <div class="col-md-6">
+                                        <label class="col-form-label">Sede:</label>
+                                        <dx:ASPxComboBox ID="cmbSede" runat="server" ValueType="System.Int32" CssClass="form-control"
                                             DataSourceID="odsSedesActivas" TextField="nombre" ValueField="codigo">
                                         </dx:ASPxComboBox>
                                         <asp:ObjectDataSource ID="odsSedesActivas" runat="server"
@@ -67,10 +80,11 @@
                                             Display="Dynamic" CssClass="text-danger" />
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-md-2 col-form-label">Programa:</label>
-                                    <div class="col-md-4">
-                                        <dx:ASPxComboBox ID="cmbProgramasActivos" runat="server" ValueType="System.Int32"
+                                <div class="row">
+                                    
+                                    <div class="col-md-6">
+                                        <label class="col-form-label">Programa:</label>
+                                        <dx:ASPxComboBox ID="cmbProgramasActivos" runat="server" ValueType="System.Int32" CssClass="form-control"
                                             DataSourceID="odsProgramasActivos" TextField="nombre" ValueField="codigo">
                                         </dx:ASPxComboBox>
                                         <asp:ObjectDataSource ID="odsProgramasActivos" runat="server"
@@ -81,9 +95,10 @@
                                             ErrorMessage="Seleccione el programa"
                                             Display="Dynamic" CssClass="text-danger" />
                                     </div>
-                                    <label class="col-md-2 col-form-label">Periodo Académico:</label>
-                                    <div class="col-md-4">
-                                        <dx:ASPxComboBox ID="cmbPeriodoAcademico" runat="server" ValueType="System.String">
+                                  
+                                    <div class="col-md-6">
+                                        <label class="col-form-label">Periodo Académico:</label>
+                                        <dx:ASPxComboBox ID="cmbPeriodoAcademico" runat="server" ValueType="System.String" CssClass="form-control" >
                                             <Items>
                                                 <dx:ListEditItem Text="2024-1" Value="2024-1" />
                                                 <dx:ListEditItem Text="2024-2" Value="2024-2" />
@@ -100,7 +115,8 @@
                             <div class="wizard-step">
                             </div>
                             <div class="navigation-buttons">
-                                <dx:ASPxButton ID="NextButton1" runat="server" Text="Siguiente" AutoPostBack="false"
+                                <dx:ASPxButton ID="NextButton1" runat="server" Text="Siguiente" AutoPostBack="false" 
+                                 
                                     ClientSideEvents-Click="function(s, e) { validateStep(0); }" />
                             </div>
                         </dx:ContentControl>
@@ -147,11 +163,11 @@
                                             ErrorMessage="Segundo Apellido es requerido"></asp:RequiredFieldValidator>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h4 class="col-form-label">Fecha y lugar de nacimiento</h4>
+                                
+                                    <div class="col-md-12">
+                                        <h4 class="col-form-label mt-3">Fecha y lugar de nacimiento</h4>
                                     </div>
-                                </div>
+                                
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="col-form-label">Fecha nacimiento:</label>
@@ -222,7 +238,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label class="col-form-label">Grupo sanguíneo:</label>
+                                        <label class="col-form-label mt-3">Grupo sanguíneo:</label>
                                         <dx:ASPxComboBox ID="cmbGrupoSanguineo" runat="server" CssClass="form-control" ValidationSettings-IsRequired="true">
                                             <Items>
                                                 <dx:ListEditItem Text="O+" Value="O+" />
@@ -234,7 +250,7 @@
                                             ErrorMessage="Grupo Sanguíneo es requerido"></asp:RequiredFieldValidator>
                                     </div>
                                     <div class="col-md-6">
-                                        <label class="col-form-label">Tipo de documento:</label>
+                                        <label class="col-form-label mt-3">Tipo de documento:</label>
                                         <dx:ASPxComboBox ID="cmbTipoDocumento" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" ValueType="System.Int32" TextField="nombre" ValueField="codigo" DataSourceID="odsTiposDocActivos">
                                         </dx:ASPxComboBox>
@@ -288,9 +304,9 @@
                                             ControlToValidate="cmbCiudadExpedicion" Display="Dynamic" CssClass="text-danger"
                                             ErrorMessage="Ciudad de Expedición es requerida"></asp:RequiredFieldValidator>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <label>Género *</label><br />
-                                        <dx:ASPxRadioButtonList ID="rblSexo" runat="server" CssClass="form-check"
+                                        <dx:ASPxRadioButtonList ID="rblSexo" runat="server" CssClass="form-control form-check" 
                                             ValidationSettings-IsRequired="true" RepeatDirection="Horizontal">
                                             <Items>
                                                 <dx:ListEditItem Text="Masculino" Value="Masculino" />
@@ -303,10 +319,10 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-7">
                                         <label>Estado Civil *</label><br />
-                                        <dx:ASPxRadioButtonList ID="rblEstadoCivil" runat="server" CssClass="form-check"
-                                            ValidationSettings-IsRequired="true" RepeatDirection="Horizontal">
+                                        <dx:ASPxRadioButtonList ID="rblEstadoCivil" runat="server" CssClass="form-control form-check"
+                                            ValidationSettings-IsRequired="true" RepeatDirection="Horizontal" >
                                             <Items>
                                                 <dx:ListEditItem Text="Soltero(a)" Value="Soltero(a)" />
                                                 <dx:ListEditItem Text="Casado(a)" Value="Casado(a)" />
