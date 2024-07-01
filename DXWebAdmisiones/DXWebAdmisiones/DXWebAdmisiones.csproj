@@ -117,6 +117,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\js\home.js" />
+    <Content Include="Scripts\styles\home.css" />
     <Content Include="View\List.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="Scripts\bootstrap.min.js" />

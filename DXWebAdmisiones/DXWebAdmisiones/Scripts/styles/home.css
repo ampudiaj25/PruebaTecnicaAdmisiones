@@ -1,0 +1,19 @@
+.wizard-step {
+    margin-bottom: 20PX;
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+}
+
+.pageControl {
+    Width: 100%;
+    Height: 300px;
+    background-color: lightcyan;
+}
+
+h4 {
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 1px;
+    width: 100%;
+}

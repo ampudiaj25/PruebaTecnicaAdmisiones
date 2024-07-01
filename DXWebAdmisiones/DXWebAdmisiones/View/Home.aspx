@@ -3,29 +3,10 @@
 <%@ Register Assembly="DevExpress.Web.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
-    <style>
-        .wizard-step {
-            margin-bottom: 20PX;
-        }
-
-        .navigation-buttons {
-            margin-top: 20px;
-        }
-
-        .pageControl {
-            Width: 100%;
-            Height: 300px;
-            background-color: lightcyan;
-        }
-
-        h4 {
-            border-bottom: 1px solid lightgrey;
-            padding-bottom: 1px;
-            width: 100%;
-        }
-    </style>
+    <link href="../Scripts/styles/home.css" rel="stylesheet" type="text/css" />
     <div class="container">
-        <dx:ASPxPageControl ID="PageControl1" runat="server" ActiveTabIndex="0" ClientInstanceName="pageControl" CssClass="pageControl">
+        <dx:ASPxPageControl ID="PageControl1" runat="server" ActiveTabIndex="0" 
+            ClientInstanceName="pageControl" CssClass="pageControl">
             <TabPages>
                 <dx:TabPage Text="1. Información de Inscripción" Name="tabStep1">
                     <ContentCollection>
@@ -122,8 +103,7 @@
                         </dx:ContentControl>
                     </ContentCollection>
                 </dx:TabPage>
-
-                <dx:TabPage Text="2. Información Personal" Name="tabStep2">
+                <dx:TabPage Text="2. Información Personal" Name="tabStep2" ClientEnabled="true">
                     <ContentCollection>
                         <dx:ContentControl>
                             <div class="wizard-step">
@@ -195,7 +175,10 @@
                                         <dx:ASPxComboBox ID="cmbPais" runat="server" CssClass="form-control" ValueType="System.Int32"
                                             TextField="nombre" ValueField="codigo" ClientInstanceName="cbPais" Width="100%"
                                             ValidationSettings-IsRequired="true" DataSourceID="odsPaisesActivos" AutoPostBack="false"
-                                            ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanelDep); }">
+                                            ClientSideEvents-SelectedIndexChanged="function(s, e) { 
+                                                cmbDepartamento.SetValue(null); 
+                                                cmbDepartamento.ClearItems();
+                                                OnSelectedIndexChanged(s,e,callbackPanelDep); }">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="País de nacimiento es requerido" />
                                             </ValidationSettings>
@@ -216,8 +199,11 @@
                                                     <dx:ASPxComboBox ID="cmbDepartamento" runat="server" CssClass="form-control"
                                                         ValueType="System.Int32" TextField="nombre" ValueField="codigo"
                                                         ValidationSettings-IsRequired="true" DataSourceID="odsDepartamentos"
-                                                        AutoPostBack="false" Width="100%"
-                                                        ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanelCiudad); }">
+                                                        AutoPostBack="false" Width="100%" ClientInstanceName="cmbDepartamento"
+                                                        ClientSideEvents-SelectedIndexChanged="function(s, e) { 
+                                                        cmbCiudad.SetValue(null); 
+                                                        cmbCiudad.ClearItems();
+                                                        OnSelectedIndexChanged(s,e,callbackPanelCiudad); }">
                                                         <ValidationSettings ErrorTextPosition="Bottom">
                                                             <RequiredField IsRequired="true" ErrorText="Departamento de nacimiento es requerido" />
                                                         </ValidationSettings>
@@ -242,7 +228,7 @@
                                                 <dx:PanelContent>
                                                     <dx:ASPxComboBox ID="cmbCiudad" runat="server" CssClass="form-control" DataSourceID="odsCiudad"
                                                         ValidationSettings-IsRequired="true" ValueType="System.Int32" TextField="nombre"
-                                                        ValueField="codigo" Width="100%">
+                                                        ValueField="codigo" Width="100%" ClientInstanceName="cmbCiudad">
                                                         <ValidationSettings ErrorTextPosition="Bottom">
                                                             <RequiredField IsRequired="true" ErrorText="Ciudad de nacimiento es requerido" />
                                                         </ValidationSettings>
@@ -316,7 +302,10 @@
                                         <dx:ASPxComboBox ID="cmbPaisExpedicion" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" DataSourceID="odsPaisesExpActivos" ValueType="System.Int32" AutoPostBack="false"
                                             TextField="nombre" ValueField="codigo" Width="100%"
-                                            ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanel); }">
+                                            ClientSideEvents-SelectedIndexChanged="function(s, e) { 
+                                            cmbDepartamentoExpedicion.SetValue(null); 
+                                            cmbDepartamentoExpedicion.ClearItems();
+                                            OnSelectedIndexChanged(s,e,callbackPanel); }">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="País de expedicion es requerido" />
                                             </ValidationSettings>
@@ -336,8 +325,11 @@
                                                     <dx:ASPxComboBox ID="cmbDepartamentoExpedicion" runat="server" CssClass="form-control"
                                                         ValueType="System.Int32" TextField="nombre" ValueField="codigo"
                                                         ValidationSettings-IsRequired="true" DataSourceID="odsDepartamentosExp"
-                                                        AutoPostBack="false" Width="100%"
-                                                        ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanelCiudadE); }">
+                                                        AutoPostBack="false" Width="100%" ClientInstanceName="cmbDepartamentoExpedicion"
+                                                        ClientSideEvents-SelectedIndexChanged="function(s, e) { 
+                                                        cmbCiudadExp.SetValue(null); 
+                                                        cmbCiudadExp.ClearItems();
+                                                        OnSelectedIndexChanged(s,e,callbackPanelCiudadE); }">
                                                         <ValidationSettings ErrorTextPosition="Bottom">
                                                             <RequiredField IsRequired="true" ErrorText="Departamento de expedicion es requerido" />
                                                         </ValidationSettings>
@@ -363,7 +355,7 @@
                                                 <dx:PanelContent>
                                                     <dx:ASPxComboBox ID="cmbCiudadExp" runat="server" CssClass="form-control" DataSourceID="odsCiudadExp"
                                                         ValidationSettings-IsRequired="true" ValueType="System.Int32" TextField="nombre"
-                                                        ValueField="codigo" Width="100%">
+                                                        ValueField="codigo" Width="100%" ClientInstanceName="cmbCiudadExp">
                                                         <ValidationSettings ErrorTextPosition="Bottom">
                                                             <RequiredField IsRequired="true" ErrorText="Ciudad de expedicion es requerido" />
                                                         </ValidationSettings>
@@ -418,53 +410,32 @@
                                     AutoPostBack="false" ClientSideEvents-Click="function(s, e) { pageControl.SetActiveTabIndex(0); }" />
                                 <dx:ASPxButton ID="FinishButton2" runat="server" Text="Guardar"
                                     AutoPostBack="false" ClientSideEvents-Click="function(s, e) { save(1); }" />
-                                <dx:ASPxCallback ID="cbSave" ClientInstanceName="cbSave" runat="server" OnCallback="cbSave_Callback">
+                                <dx:ASPxCallback ID="cbSave" ClientInstanceName="cbSave" runat="server"
+                                    OnCallback="cbSave_Callback">
+                                    <ClientSideEvents CallbackComplete="function(s, e) { loadingPanel.Hide(); popupMessage.Show();}" />
                                 </dx:ASPxCallback>
+
                             </div>
                         </dx:ContentControl>
                     </ContentCollection>
                 </dx:TabPage>
             </TabPages>
         </dx:ASPxPageControl>
-
-        <script type="text/javascript">
-            function moveStep(stepIndex) {
-                var isValid = validateStep(stepIndex);
-                if (isValid) {
-                    pageControl.SetActiveTabIndex(stepIndex + 1);
-                }
-            }
-
-            function save(stepIndex) {
-                var isValid = validateStep(stepIndex);
-                if (isValid) {
-                    cbSave.PerformCallback();
-                }
-            }
-
-            function validateStep(stepIndex) {
-                var isValid = true;
-                var tabPage = document.getElementById('Content_PageControl1_C' + stepIndex);
-
-                if (tabPage) {
-                    var tdElements = tabPage.querySelectorAll('td[id^="Content_PageControl1_"][id$="_ETC"]');
-                    tdElements.forEach(function (td) {
-                        if (td.innerText.trim().length > 0) {
-                            isValid = false;
-                        }
-                    });
-                }
-
-                return isValid;
-            }
-
-            function OnSelectedIndexChanged(s, e, d) {
-                var id = s.GetValue();
-                if (id !== null) {
-                    d.PerformCallback(id.toString());
-                }
-            }
+        <dx:ASPxPopupControl ID="popupMessage" runat="server" ClientInstanceName="popupMessage"
+            Modal="true" ShowCloseButton="true" CloseAction="CloseButton" ShowHeader="true" HeaderText=""
+            PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter">
+            <ContentCollection>
+                <dx:PopupControlContentControl runat="server">
+                    <div style="padding: 20px;">
+                        <p>¡Guardado exitosamente!</p>
+                    </div>
+                </dx:PopupControlContentControl>
+            </ContentCollection>
+        </dx:ASPxPopupControl>
+        <dx:ASPxLoadingPanel ID="loadingPanel" runat="server" ClientInstanceName="loadingPanel"
+            Text="Guardando..." Modal="true">
+        </dx:ASPxLoadingPanel>
+        <script type="text/javascript" src="../Scripts/js/home.js">            
         </script>
     </div>
-
 </asp:Content>
