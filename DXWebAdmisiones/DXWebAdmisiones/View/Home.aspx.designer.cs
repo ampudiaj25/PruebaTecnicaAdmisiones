@@ -33,15 +33,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxRadioButtonList rblTipoAspirante;
 
         /// <summary>
-        /// Control rfvTipoAspirante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTipoAspirante;
-
-        /// <summary>
         /// Control cmbModalidad.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cmbModalidad;
-
-        /// <summary>
-        /// Control rfvModalidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvModalidad;
 
         /// <summary>
         /// Control cmbSede.
@@ -78,15 +60,6 @@ namespace DXWebAdmisiones
         protected global::System.Web.UI.WebControls.ObjectDataSource odsSedesActivas;
 
         /// <summary>
-        /// Control rfvSede.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSede;
-
-        /// <summary>
         /// Control cmbProgramasActivos.
         /// </summary>
         /// <remarks>
@@ -105,15 +78,6 @@ namespace DXWebAdmisiones
         protected global::System.Web.UI.WebControls.ObjectDataSource odsProgramasActivos;
 
         /// <summary>
-        /// Control rfvPrograma.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrograma;
-
-        /// <summary>
         /// Control cmbPeriodoAcademico.
         /// </summary>
         /// <remarks>
@@ -121,15 +85,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxComboBox cmbPeriodoAcademico;
-
-        /// <summary>
-        /// Control rfvPeriodoAcademico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPeriodoAcademico;
 
         /// <summary>
         /// Control NextButton1.
@@ -150,15 +105,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxTextBox txtPrimerNombre;
 
         /// <summary>
-        /// Control rfvPrimerNombre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrimerNombre;
-
-        /// <summary>
         /// Control txtSegundoNombre.
         /// </summary>
         /// <remarks>
@@ -166,15 +112,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxTextBox txtSegundoNombre;
-
-        /// <summary>
-        /// Control rfvSegundoNombre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSegundoNombre;
 
         /// <summary>
         /// Control txtPrimerApellido.
@@ -186,15 +123,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxTextBox txtPrimerApellido;
 
         /// <summary>
-        /// Control rfvPrimerApellido.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrimerApellido;
-
-        /// <summary>
         /// Control txtSegundoApellido.
         /// </summary>
         /// <remarks>
@@ -204,15 +132,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxTextBox txtSegundoApellido;
 
         /// <summary>
-        /// Control rfvSegundoApellido.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSegundoApellido;
-
-        /// <summary>
         /// Control deFechaNacimiento.
         /// </summary>
         /// <remarks>
@@ -220,15 +139,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxDateEdit deFechaNacimiento;
-
-        /// <summary>
-        /// Control rfvFechaNacimiento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFechaNacimiento;
 
         /// <summary>
         /// Control cmbPais.
@@ -249,22 +159,13 @@ namespace DXWebAdmisiones
         protected global::System.Web.UI.WebControls.ObjectDataSource odsPaisesActivos;
 
         /// <summary>
-        /// Control rfvPais.
+        /// Control callbackPanelDep.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPais;
-
-        /// <summary>
-        /// Control callbackPanel.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::DevExpress.Web.ASPxCallbackPanel callbackPanel;
+        protected global::DevExpress.Web.ASPxCallbackPanel callbackPanelDep;
 
         /// <summary>
         /// Control cmbDepartamento.
@@ -321,15 +222,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxComboBox cmbGrupoSanguineo;
 
         /// <summary>
-        /// Control rfvGrupoSanguineo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvGrupoSanguineo;
-
-        /// <summary>
         /// Control cmbTipoDocumento.
         /// </summary>
         /// <remarks>
@@ -348,15 +240,6 @@ namespace DXWebAdmisiones
         protected global::System.Web.UI.WebControls.ObjectDataSource odsTiposDocActivos;
 
         /// <summary>
-        /// Control rfvTipoDocumento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTipoDocumento;
-
-        /// <summary>
         /// Control txtNumeroDocumento.
         /// </summary>
         /// <remarks>
@@ -366,15 +249,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxTextBox txtNumeroDocumento;
 
         /// <summary>
-        /// Control rfvNumeroDocumento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNumeroDocumento;
-
-        /// <summary>
         /// Control deFechaExpedicion.
         /// </summary>
         /// <remarks>
@@ -382,15 +256,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxDateEdit deFechaExpedicion;
-
-        /// <summary>
-        /// Control rfvFechaExpedicion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFechaExpedicion;
 
         /// <summary>
         /// Control cmbPaisExpedicion.
@@ -409,15 +274,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource odsPaisesExpActivos;
-
-        /// <summary>
-        /// Control rfvPaisExpedicion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPaisExpedicion;
 
         /// <summary>
         /// Control ASPxCallbackPanel1.
@@ -483,15 +339,6 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxRadioButtonList rblSexo;
 
         /// <summary>
-        /// Control rfvSexo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSexo;
-
-        /// <summary>
         /// Control rblEstadoCivil.
         /// </summary>
         /// <remarks>
@@ -499,15 +346,6 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxRadioButtonList rblEstadoCivil;
-
-        /// <summary>
-        /// Control rfvEstadoCivil.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEstadoCivil;
 
         /// <summary>
         /// Control PrevButton2.
