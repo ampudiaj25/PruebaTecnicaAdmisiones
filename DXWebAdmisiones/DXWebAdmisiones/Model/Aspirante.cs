@@ -34,14 +34,6 @@ namespace DXWebAdmisiones.Model
         [StringLength(100)]
         public string segundoApellido { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string telefono { get; set; }
-
-        [Required]
-        [StringLength(100)]
-        public string correo { get; set; }
-
         [Column(TypeName = "date")]
         public DateTime fechaNacimiento { get; set; }
 

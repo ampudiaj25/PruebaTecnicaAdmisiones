@@ -40,14 +40,6 @@ namespace DXWebAdmisiones.Model
                 .IsUnicode(false);
 
             modelBuilder.Entity<Aspirante>()
-                .Property(e => e.telefono)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Aspirante>()
-                .Property(e => e.correo)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Aspirante>()
                 .Property(e => e.grupoSanguineo)
                 .IsUnicode(false);
 
@@ -120,6 +112,10 @@ namespace DXWebAdmisiones.Model
 
             modelBuilder.Entity<Inscripcion>()
                 .Property(e => e.modalidad)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Inscripcion>()
+                .Property(e => e.tipoAspirante)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Inscripcion>()

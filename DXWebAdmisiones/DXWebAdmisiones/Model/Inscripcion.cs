@@ -18,6 +18,10 @@ namespace DXWebAdmisiones.Model
         [StringLength(100)]
         public string modalidad { get; set; }
 
+        [Required]
+        [StringLength(100)]
+        public string tipoAspirante { get; set; }
+
         public int codigoSede { get; set; }
 
         public int codigoPrograma { get; set; }
@@ -27,7 +31,7 @@ namespace DXWebAdmisiones.Model
         public string periodoAcademico { get; set; }
 
         [Required]
-        [StringLength(1)]
+        [StringLength(100)]
         public string estado { get; set; }
 
         public virtual Aspirante Aspirante { get; set; }

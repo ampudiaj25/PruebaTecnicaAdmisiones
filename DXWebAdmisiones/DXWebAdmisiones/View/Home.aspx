@@ -35,7 +35,7 @@
                                     <label class="col-md-2 col-form-label">Tipo Aspirante:</label>
                                     <div class="col-md-8">
                                         <dx:ASPxRadioButtonList ID="rblTipoAspirante" runat="server" CssClass="form-control "
-                                            RepeatDirection="Horizontal" ValueType="System.String" CausesValidation="true" >
+                                            RepeatDirection="Horizontal" ValueType="System.String" CausesValidation="true">
                                             <Items>
                                                 <dx:ListEditItem Text="Nuevo" Value="Nuevo" />
                                                 <dx:ListEditItem Text="Reingreso" Value="Reingreso" />
@@ -77,7 +77,7 @@
                                         <asp:ObjectDataSource ID="odsSedesActivas" runat="server"
                                             TypeName="MiProyecto.Controllers.SedeController"
                                             SelectMethod="GetAll"></asp:ObjectDataSource>
-                                  
+
                                     </div>
                                 </div>
                                 <div class="row">
@@ -98,7 +98,7 @@
 
                                     <div class="col-md-6">
                                         <label class="col-form-label">Periodo Académico:</label>
-                                        <dx:ASPxComboBox ID="cmbPeriodoAcademico" runat="server" ValueType="System.String" 
+                                        <dx:ASPxComboBox ID="cmbPeriodoAcademico" runat="server" ValueType="System.String"
                                             CssClass="form-control" Width="100%">
                                             <Items>
                                                 <dx:ListEditItem Text="2024-1" Value="2024-1" />
@@ -117,7 +117,7 @@
                             </div>
                             <div class="navigation-buttons">
                                 <dx:ASPxButton ID="NextButton1" runat="server" Text="Siguiente" AutoPostBack="false"
-                                    ClientSideEvents-Click="function(s, e) { validateStep(0); }" />
+                                    ClientSideEvents-Click="function(s, e) { moveStep(0); }" />
                             </div>
                         </dx:ContentControl>
                     </ContentCollection>
@@ -130,7 +130,7 @@
                                 <div class="row">
                                     <div class="col-md-8">
                                         <label class="col-form-label">Primer nombre:</label>
-                                        <dx:ASPxTextBox ID="txtPrimerNombre" runat="server" CssClass="form-control" 
+                                        <dx:ASPxTextBox ID="txtPrimerNombre" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Primer nombre es requerido" />
@@ -153,25 +153,25 @@
                                 <div class="row">
                                     <div class="col-md-8">
                                         <label class="col-form-label">Primer Apellido:</label>
-                                        <dx:ASPxTextBox ID="txtPrimerApellido" runat="server" 
+                                        <dx:ASPxTextBox ID="txtPrimerApellido" runat="server"
                                             CssClass="form-control" ValidationSettings-IsRequired="true" Width="100%">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Primer apellido es requerido" />
                                             </ValidationSettings>
                                         </dx:ASPxTextBox>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-8">
                                         <label class="col-form-label">Segundo Apellido:</label>
-                                        <dx:ASPxTextBox ID="txtSegundoApellido" runat="server" CssClass="form-control" 
+                                        <dx:ASPxTextBox ID="txtSegundoApellido" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Segundo apellido es requerido" />
                                             </ValidationSettings>
                                         </dx:ASPxTextBox>
-                                        
+
                                     </div>
                                 </div>
 
@@ -182,13 +182,13 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="col-form-label">Fecha nacimiento:</label>
-                                        <dx:ASPxDateEdit ID="deFechaNacimiento" runat="server" CssClass="form-control" 
+                                        <dx:ASPxDateEdit ID="deFechaNacimiento" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Fecha de nacimiento es requerido" />
                                             </ValidationSettings>
                                         </dx:ASPxDateEdit>
-                                        
+
                                     </div>
                                     <div class="col-md-6">
                                         <label class="col-form-label">País:</label>
@@ -218,7 +218,7 @@
                                                         ValidationSettings-IsRequired="true" DataSourceID="odsDepartamentos"
                                                         AutoPostBack="false" Width="100%"
                                                         ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanelCiudad); }">
-                                                        <ValidationSettings  ErrorTextPosition="Bottom">
+                                                        <ValidationSettings ErrorTextPosition="Bottom">
                                                             <RequiredField IsRequired="true" ErrorText="Departamento de nacimiento es requerido" />
                                                         </ValidationSettings>
                                                     </dx:ASPxComboBox>
@@ -241,7 +241,7 @@
                                             <PanelCollection>
                                                 <dx:PanelContent>
                                                     <dx:ASPxComboBox ID="cmbCiudad" runat="server" CssClass="form-control" DataSourceID="odsCiudad"
-                                                        ValidationSettings-IsRequired="true" ValueType="System.Int32" TextField="nombre" 
+                                                        ValidationSettings-IsRequired="true" ValueType="System.Int32" TextField="nombre"
                                                         ValueField="codigo" Width="100%">
                                                         <ValidationSettings ErrorTextPosition="Bottom">
                                                             <RequiredField IsRequired="true" ErrorText="Ciudad de nacimiento es requerido" />
@@ -261,7 +261,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="col-form-label mt-3">Grupo sanguíneo:</label>
-                                        <dx:ASPxComboBox ID="cmbGrupoSanguineo" runat="server" CssClass="form-control" 
+                                        <dx:ASPxComboBox ID="cmbGrupoSanguineo" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
                                             <Items>
                                                 <dx:ListEditItem Text="O+" Value="O+" />
@@ -291,17 +291,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="col-form-label">Numero de documento:</label>
-                                        <dx:ASPxTextBox ID="txtNumeroDocumento" runat="server" CssClass="form-control" 
+                                        <dx:ASPxTextBox ID="txtNumeroDocumento" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Numero de documento es requerido" />
                                             </ValidationSettings>
                                         </dx:ASPxTextBox>
-                                        
+
                                     </div>
                                     <div class="col-md-6">
                                         <label class="col-form-label">Fecha de expedicion:</label>
-                                        <dx:ASPxDateEdit ID="deFechaExpedicion" runat="server" CssClass="form-control" 
+                                        <dx:ASPxDateEdit ID="deFechaExpedicion" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Fecha de expedicion es requerido" />
@@ -383,8 +383,8 @@
                                         <dx:ASPxRadioButtonList ID="rblSexo" runat="server" CssClass="form-control form-check"
                                             ValidationSettings-IsRequired="true" RepeatDirection="Horizontal">
                                             <Items>
-                                                <dx:ListEditItem Text="Masculino" Value="Masculino" />
-                                                <dx:ListEditItem Text="Femenino" Value="Femenino" />
+                                                <dx:ListEditItem Text="Masculino" Value="M" />
+                                                <dx:ListEditItem Text="Femenino" Value="F" />
                                             </Items>
                                             <ValidationSettings ErrorTextPosition="Bottom">
                                                 <RequiredField IsRequired="true" ErrorText="Género es requerido" />
@@ -412,13 +412,15 @@
 
                                     </div>
                                 </div>
-
                             </div>
                             <div class="navigation-buttons">
-                                <dx:ASPxButton ID="PrevButton2" runat="server" Text="Anterior" AutoPostBack="false" ClientSideEvents-Click="function(s, e) { pageControl.SetActiveTabIndex(0); }" />
-                                <dx:ASPxButton ID="FinishButton2" runat="server" Text="Guardar" AutoPostBack="false" ClientSideEvents-Click="function(s, e) { validateStep(1); }" />
+                                <dx:ASPxButton ID="PrevButton2" runat="server" Text="Anterior"
+                                    AutoPostBack="false" ClientSideEvents-Click="function(s, e) { pageControl.SetActiveTabIndex(0); }" />
+                                <dx:ASPxButton ID="FinishButton2" runat="server" Text="Guardar"
+                                    AutoPostBack="false" ClientSideEvents-Click="function(s, e) { save(1); }" />
+                                <dx:ASPxCallback ID="cbSave" ClientInstanceName="cbSave" runat="server" OnCallback="cbSave_Callback">
+                                </dx:ASPxCallback>
                             </div>
-
                         </dx:ContentControl>
                     </ContentCollection>
                 </dx:TabPage>
@@ -426,13 +428,26 @@
         </dx:ASPxPageControl>
 
         <script type="text/javascript">
+            function moveStep(stepIndex) {
+                var isValid = validateStep(stepIndex);
+                if (isValid) {
+                    pageControl.SetActiveTabIndex(stepIndex + 1);
+                }
+            }
+
+            function save(stepIndex) {
+                var isValid = validateStep(stepIndex);
+                if (isValid) {
+                    cbSave.PerformCallback();
+                }
+            }
+
             function validateStep(stepIndex) {
-                // Page_ClientValidate();
                 var isValid = true;
                 var tabPage = document.getElementById('Content_PageControl1_C' + stepIndex);
 
                 if (tabPage) {
-                    var tdElements = tabPage.querySelectorAll('td[id^="Content_PageControl1_"][id$="_ETC"]');                    
+                    var tdElements = tabPage.querySelectorAll('td[id^="Content_PageControl1_"][id$="_ETC"]');
                     tdElements.forEach(function (td) {
                         if (td.innerText.trim().length > 0) {
                             isValid = false;
@@ -440,10 +455,7 @@
                     });
                 }
 
-                // Si todos los campos en el tab activo son válidos, avanzar al siguiente tab
-                if (isValid) {
-                    pageControl.SetActiveTabIndex(stepIndex + 1);
-                }
+                return isValid;
             }
 
             function OnSelectedIndexChanged(s, e, d) {
@@ -452,8 +464,6 @@
                     d.PerformCallback(id.toString());
                 }
             }
-
-
         </script>
     </div>
 
