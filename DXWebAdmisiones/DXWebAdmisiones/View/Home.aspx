@@ -108,7 +108,7 @@
                         <dx:ContentControl>
                             <div class="wizard-step">
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-6">
                                         <label class="col-form-label">Primer nombre:</label>
                                         <dx:ASPxTextBox ID="txtPrimerNombre" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
@@ -118,9 +118,8 @@
                                         </dx:ASPxTextBox>
 
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8">
+
+                                    <div class="col-md-6">
                                         <label class="col-form-label">Segundo nombre:</label>
                                         <dx:ASPxTextBox ID="txtSegundoNombre" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
@@ -131,7 +130,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-8">
+                                    <div class="col-md-6">
                                         <label class="col-form-label">Primer Apellido:</label>
                                         <dx:ASPxTextBox ID="txtPrimerApellido" runat="server"
                                             CssClass="form-control" ValidationSettings-IsRequired="true" Width="100%">
@@ -139,11 +138,8 @@
                                                 <RequiredField IsRequired="true" ErrorText="Primer apellido es requerido" />
                                             </ValidationSettings>
                                         </dx:ASPxTextBox>
-
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8">
+                                    </div>                               
+                                    <div class="col-md-6">
                                         <label class="col-form-label">Segundo Apellido:</label>
                                         <dx:ASPxTextBox ID="txtSegundoApellido" runat="server" CssClass="form-control"
                                             ValidationSettings-IsRequired="true" Width="100%">
