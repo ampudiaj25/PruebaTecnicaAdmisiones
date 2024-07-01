@@ -282,27 +282,61 @@
                                     <div class="col-md-6">
                                         <label class="col-form-label">País de expedicion:</label>
                                         <dx:ASPxComboBox ID="cmbPaisExpedicion" runat="server" CssClass="form-control"
-                                            ValidationSettings-IsRequired="true" DataSourceID="odsPaisesActivos" ValueType="System.Int32" TextField="nombre" ValueField="codigo">
+                                            ValidationSettings-IsRequired="true" DataSourceID="odsPaisesExpActivos" ValueType="System.Int32" AutoPostBack="false"
+                                            TextField="nombre" ValueField="codigo" 
+                                            ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanel); }">
                                         </dx:ASPxComboBox>
+                                        <asp:ObjectDataSource ID="odsPaisesExpActivos" runat="server"
+                                            TypeName="MiProyecto.Controllers.PaisController"
+                                            SelectMethod="GetAll"></asp:ObjectDataSource>
                                         <asp:RequiredFieldValidator ID="rfvPaisExpedicion" runat="server"
                                             ControlToValidate="cmbPaisExpedicion" Display="Dynamic" CssClass="text-danger"
                                             ErrorMessage="País de Expedición es requerido"></asp:RequiredFieldValidator>
                                     </div>
+
                                     <div class="col-md-6">
                                         <label class="col-form-label">Departamento de expedicion:</label>
-                                        <dx:ASPxComboBox ID="cmbDepartamentoExpedicion" runat="server" CssClass="form-control" ValidationSettings-IsRequired="true"></dx:ASPxComboBox>
-                                        <asp:RequiredFieldValidator ID="rfvDepartamentoExpedicion" runat="server"
-                                            ControlToValidate="cmbDepartamentoExpedicion" Display="Dynamic" CssClass="text-danger"
-                                            ErrorMessage="Departamento de Expedición es requerido"></asp:RequiredFieldValidator>
+                                        <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server"
+                                            ClientInstanceName="callbackPanel" OnCallback="callbackPanel_CallbackExp">
+                                            <PanelCollection>
+                                                <dx:PanelContent>
+                                                    <dx:ASPxComboBox ID="cmbDepartamentoExpedicion" runat="server" CssClass="form-control"
+                                                        ValueType="System.Int32" TextField="nombre" ValueField="codigo"
+                                                        ValidationSettings-IsRequired="true" DataSourceID="odsDepartamentosExp"
+                                                        AutoPostBack="false"
+                                                        ClientSideEvents-SelectedIndexChanged="function(s, e) { OnSelectedIndexChanged(s,e,callbackPanelCiudadE); }">
+                                                    </dx:ASPxComboBox>
+                                                </dx:PanelContent>
+                                            </PanelCollection>
+                                        </dx:ASPxCallbackPanel>
+                                        <asp:ObjectDataSource ID="odsDepartamentosExp" runat="server" SelectMethod="GetAll"
+                                            TypeName="MiProyecto.Controllers.DepartamentoController">
+                                            <SelectParameters>
+                                                <asp:Parameter Name="paisId" Type="Int32" />
+                                            </SelectParameters>
+                                        </asp:ObjectDataSource>
+                                        
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="col-form-label">Ciudad de expedicion:</label>
-                                        <dx:ASPxComboBox ID="cmbCiudadExpedicion" runat="server" CssClass="form-control" ValidationSettings-IsRequired="true"></dx:ASPxComboBox>
-                                        <asp:RequiredFieldValidator ID="rfvCiudadExpedicion" runat="server"
-                                            ControlToValidate="cmbCiudadExpedicion" Display="Dynamic" CssClass="text-danger"
-                                            ErrorMessage="Ciudad de Expedición es requerida"></asp:RequiredFieldValidator>
+                                        <dx:ASPxCallbackPanel ID="callbackPanelCiudadE" runat="server"
+                                            ClientInstanceName="callbackPanelCiudadE" OnCallback="callbackPanelCiudadE_CallbackExp">
+                                            <PanelCollection>
+                                                <dx:PanelContent>
+                                                    <dx:ASPxComboBox ID="cmbCiudadExp" runat="server" CssClass="form-control" DataSourceID="odsCiudadExp"
+                                                        ValidationSettings-IsRequired="true" ValueType="System.Int32" TextField="nombre" ValueField="codigo">
+                                                    </dx:ASPxComboBox>
+                                                    <asp:ObjectDataSource ID="odsCiudadExp" runat="server" SelectMethod="GetAll"
+                                                        TypeName="MiProyecto.Controllers.CiudadController">
+                                                        <SelectParameters>
+                                                            <asp:Parameter Name="deptoId" Type="Int32" />
+                                                        </SelectParameters>
+                                                    </asp:ObjectDataSource>
+                                                </dx:PanelContent>
+                                            </PanelCollection>
+                                        </dx:ASPxCallbackPanel>
                                     </div>
                                     <div class="col-md-4">
                                         <label>Género *</label><br />

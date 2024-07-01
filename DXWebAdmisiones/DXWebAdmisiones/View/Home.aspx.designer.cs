@@ -402,6 +402,15 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxComboBox cmbPaisExpedicion;
 
         /// <summary>
+        /// Control odsPaisesExpActivos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsPaisesExpActivos;
+
+        /// <summary>
         /// Control rfvPaisExpedicion.
         /// </summary>
         /// <remarks>
@@ -409,6 +418,15 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPaisExpedicion;
+
+        /// <summary>
+        /// Control ASPxCallbackPanel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxCallbackPanel ASPxCallbackPanel1;
 
         /// <summary>
         /// Control cmbDepartamentoExpedicion.
@@ -420,31 +438,40 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxComboBox cmbDepartamentoExpedicion;
 
         /// <summary>
-        /// Control rfvDepartamentoExpedicion.
+        /// Control odsDepartamentosExp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDepartamentoExpedicion;
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsDepartamentosExp;
 
         /// <summary>
-        /// Control cmbCiudadExpedicion.
+        /// Control callbackPanelCiudadE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxComboBox cmbCiudadExpedicion;
+        protected global::DevExpress.Web.ASPxCallbackPanel callbackPanelCiudadE;
 
         /// <summary>
-        /// Control rfvCiudadExpedicion.
+        /// Control cmbCiudadExp.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCiudadExpedicion;
+        protected global::DevExpress.Web.ASPxComboBox cmbCiudadExp;
+
+        /// <summary>
+        /// Control odsCiudadExp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource odsCiudadExp;
 
         /// <summary>
         /// Control rblSexo.

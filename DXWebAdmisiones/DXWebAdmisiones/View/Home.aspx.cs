@@ -32,5 +32,25 @@ namespace DXWebAdmisiones {
                 cmbCiudad.DataBind();
             }
         }
+
+        protected void callbackPanel_CallbackExp(object sender, CallbackEventArgsBase e)
+        {
+            int paisId;
+            if (int.TryParse(e.Parameter, out paisId))
+            {
+                odsDepartamentosExp.SelectParameters["paisId"].DefaultValue = paisId.ToString();
+                cmbDepartamentoExpedicion.DataBind();
+            }
+        }
+
+        protected void callbackPanelCiudadE_CallbackExp(object sender, CallbackEventArgsBase e)
+        {
+            int id;
+            if (int.TryParse(e.Parameter, out id))
+            {
+                odsCiudadExp.SelectParameters["deptoId"].DefaultValue = id.ToString();
+                cmbCiudadExp.DataBind();
+            }
+        }
     }
 }
