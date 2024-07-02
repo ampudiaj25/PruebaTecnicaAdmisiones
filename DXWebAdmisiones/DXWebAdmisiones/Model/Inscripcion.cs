@@ -39,5 +39,9 @@ namespace DXWebAdmisiones.Model
         public virtual Programa Programa { get; set; }
 
         public virtual Sede Sede { get; set; }
+        [NotMapped]
+        public string nombresAspirante { get; set; }
+        [NotMapped]
+        public string apellidosAspirante { get; set; }
     }
 }

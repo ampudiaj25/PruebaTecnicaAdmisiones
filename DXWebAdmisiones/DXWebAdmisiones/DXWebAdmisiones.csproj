@@ -114,6 +114,7 @@
     <Reference Include="DevExpress.Web.v24.1, Version=24.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\Excel2_35735.png" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
@@ -188,7 +189,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
