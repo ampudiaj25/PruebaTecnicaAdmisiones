@@ -87,6 +87,15 @@ namespace DXWebAdmisiones
         protected global::DevExpress.Web.ASPxComboBox cmbPeriodoAcademico;
 
         /// <summary>
+        /// Control CancelarButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton CancelarButton;
+
+        /// <summary>
         /// Control NextButton1.
         /// </summary>
         /// <remarks>
@@ -346,6 +355,15 @@ namespace DXWebAdmisiones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxRadioButtonList rblEstadoCivil;
+
+        /// <summary>
+        /// Control CancelarButton2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxButton CancelarButton2;
 
         /// <summary>
         /// Control PrevButton2.

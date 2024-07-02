@@ -35,3 +35,33 @@ function OnSelectedIndexChanged(s, e, d) {
         d.PerformCallback(id.toString());
     }
 }
+
+function Clean() {
+    rblTipoAspirante.SetValue(null);
+    cmbModalidad.SetValue(null);
+    cmbSede.SetValue(null);
+    cmbProgramasActivos.SetValue(null);
+    cmbPeriodoAcademico.SetValue(null);
+    txtPrimerNombre.SetText('');
+    txtSegundoNombre.SetText('');
+    txtPrimerApellido.SetText('');
+    txtSegundoApellido.SetText('');
+    deFechaNacimiento.SetValue(null);
+    cbPais.SetValue(null);
+    cmbDepartamento.SetValue(null);
+    cmbDepartamento.ClearItems();
+    cmbCiudad.SetValue(null);
+    cmbCiudad.ClearItems();
+    cmbGrupoSanguineo.SetValue(null);
+    cmbTipoDocumento.SetValue(null);
+    txtNumeroDocumento.SetValue(null);
+    deFechaExpedicion.SetValue(null);
+    cmbPaisExpedicion.SetValue(null);
+    cmbDepartamentoExpedicion.SetValue(null);
+    cmbDepartamentoExpedicion.ClearItems();
+    cmbCiudadExp.SetValue(null);
+    cmbCiudadExp.ClearItems();
+    rblSexo.SetValue(null);
+    rblEstadoCivil.SetValue(null);
+    pageControl.SetActiveTabIndex(0);
+}
